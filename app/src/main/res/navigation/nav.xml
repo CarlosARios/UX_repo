@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    app:startDestination="@id/page_inicio"
+    android:id="@+id/nav">
+
+<fragment
+    android:id="@+id/page_inicio"
+    android:name="com.example.tuto_bar_bottom.InicioFragment"
+    android:layout="@layout/fragment_inicio" />
+
+<fragment
+        android:id="@+id/page_favoritos"
+        android:name="com.example.tuto_bar_bottom.FavoritoFragment"
+        android:layout="@layout/fragment_favorito" />
+<fragment
+        android:id="@+id/page_configuracion"
+        android:name="com.example.tuto_bar_bottom.ConfiguracionFragment"
+        android:layout="@layout/fragment_configuracion" />
+
+
+
+
+
+
+</navigation>
