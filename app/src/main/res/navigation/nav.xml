@@ -2,26 +2,45 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    app:startDestination="@id/page_inicio"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menu_inicio"
     android:id="@+id/nav">
 
 <fragment
-    android:id="@+id/page_inicio"
+    android:id="@+id/menu_inicio"
     android:name="com.example.tuto_bar_bottom.InicioFragment"
     android:layout="@layout/fragment_inicio" />
 
-<fragment
-        android:id="@+id/page_favoritos"
-        android:name="com.example.tuto_bar_bottom.FavoritoFragment"
-        android:layout="@layout/fragment_favorito" />
-<fragment
-        android:id="@+id/page_configuracion"
-        android:name="com.example.tuto_bar_bottom.ConfiguracionFragment"
-        android:layout="@layout/fragment_configuracion" />
+    <fragment
+        android:id="@+id/menu_alarmaVoz"
+        android:name="com.example.tuto_bar_bottom.AlarmaVozFragment"
+        android:layout="@layout/fragment_alarma_voz" />
 
+    <fragment
+        android:id="@+id/menu_estadisticas"
+        android:name="com.example.tuto_bar_bottom.EstadisticasFragment"
+        android:layout="@layout/fragment_estadisticas" />
 
+    <fragment
+        android:id="@+id/page_alarmaManual"
+        android:name="com.example.tuto_bar_bottom.AlarmaManualFragment"
+        android:layout="@layout/fragment_alarma_manual" />
 
-
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.tuto_bar_bottom.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/alarmaGruposFragment"
+        android:name="com.example.tuto_bar_bottom.AlarmaGruposFragment"
+        android:label="fragment_alarma_grupos"
+        tools:layout="@layout/fragment_alarma_grupos" />
+    <fragment
+        android:id="@+id/alarmaEditarFragment"
+        android:name="com.example.tuto_bar_bottom.AlarmaEditarFragment"
+        android:label="fragment_alarma_editar"
+        tools:layout="@layout/fragment_alarma_editar" />
 
 
 </navigation>
