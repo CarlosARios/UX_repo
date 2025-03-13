@@ -14,6 +14,7 @@
             app:destination="@id/page_alarmaManual" />
     </fragment>
 
+
     <fragment
         android:id="@+id/menu_alarmaVoz"
         android:name="com.example.tuto_bar_bottom.AlarmaVozFragment"
@@ -27,7 +28,12 @@
     <fragment
         android:id="@+id/page_alarmaManual"
         android:name="com.example.tuto_bar_bottom.AlarmaManualFragment"
-        android:layout="@layout/fragment_alarma_manual" />
+        android:layout="@layout/fragment_alarma_manual">
+
+    <action
+        android:id="@+id/action_alarmaManualFragment_to_fragment_inicio"
+        app:destination="@id/menu_inicio" />
+    </fragment>
 
     <activity
         android:id="@+id/loginActivity"
