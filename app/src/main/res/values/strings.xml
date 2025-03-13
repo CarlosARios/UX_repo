@@ -5,12 +5,14 @@
     <string name="Iniciar_Sesion">Iniciar sesion</string>
     <string name="Alarmas">Alarmas</string>
     <string name="Alarma_manual">Alarma manual</string>
+    <string name="Alarma_por_voz">Alarma por voz</string>
     <string name="Configuración">Configuración</string>
     <string name="Hoy">Hoy</string>
     <string name="Inicio">Inicio</string>
     <string name="User">User</string>
     <string name="Buscar">Buscar</string>
     <string name="Estadísticas">Estadísticas</string>
+    <string name="Editar_alarma">Editar alarma</string>
     <string name="Estadísticas_grupales">Estadísticas grupales</string>
     <string name="Cancelar">Cancelar</string>
     <string name="Crear_alarma">Crear alarma</string>
@@ -37,4 +39,7 @@
     <string name="title_buscar">Buscar</string>
     <string name="title_estadisticas">Estadisticas</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="near_it">Near-it</string>
+    <string name="tipo">Tipo de Alarma</string>
+    <string name="texto_alarma_voz">Recuerda mencionar lo siguiente: Descripción --> Fecha --> Ubicación</string>
 </resources>

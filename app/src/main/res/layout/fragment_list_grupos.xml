@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_all"
-    tools:context=".InicioFragment" >
+    tools:context=".ListGruposFragment">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -33,29 +34,25 @@
             tools:layout_editor_absoluteX="1dp" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/switch4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Switch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            tools:layout_editor_absoluteY="96dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/floatingActionButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:clickable="true"
             android:src="@drawable/baseline_add_box_24"
             app:backgroundTint="@color/secondary_99"
             app:fabSize="mini"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="70dp" />
-
+            app:maxImageSize="70dp"
+            tools:layout_editor_absoluteY="649dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </FrameLayout>
