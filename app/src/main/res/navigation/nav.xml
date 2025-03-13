@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menu_inicio"
+    android:id="@+id/nav">
+
+    <fragment
+        android:id="@+id/menu_inicio"
+        android:name="com.example.tuto_bar_bottom.InicioFragment"
+        android:layout="@layout/fragment_inicio">
+        <action
+            android:id="@+id/action_inicioFragment_to_alarmaManualFragment"
+            app:destination="@id/page_alarmaManual" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_alarmaVoz"
+        android:name="com.example.tuto_bar_bottom.AlarmaVozFragment"
+        android:layout="@layout/fragment_alarma_voz" />
+
+    <fragment
+        android:id="@+id/menu_estadisticas"
+        android:name="com.example.tuto_bar_bottom.EstadisticasFragment"
+        android:layout="@layout/fragment_estadisticas" />
+
+    <fragment
+        android:id="@+id/page_alarmaManual"
+        android:name="com.example.tuto_bar_bottom.AlarmaManualFragment"
+        android:layout="@layout/fragment_alarma_manual" />
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.tuto_bar_bottom.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+
+    <fragment
+        android:id="@+id/alarmaGruposFragment"
+        android:name="com.example.tuto_bar_bottom.AlarmaGruposFragment"
+        android:label="fragment_alarma_grupos"
+        tools:layout="@layout/fragment_alarma_grupos" />
+
+    <fragment
+        android:id="@+id/alarmaEditarFragment"
+        android:name="com.example.tuto_bar_bottom.AlarmaEditarFragment"
+        android:label="fragment_alarma_editar"
+        tools:layout="@layout/fragment_alarma_editar" />
+
+</navigation>

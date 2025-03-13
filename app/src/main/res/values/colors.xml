@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#3052CC</color>
+    <color name="primary_99">#FFB2B2FA</color>
+    <color name="primary_98">#FF8686F0</color>
+    <color name="primary_90">#FF5C5CE6</color>
+    <color name="primary_80">#FF5252CC</color>
+    <color name="primary_70">#FF4747B3</color>
+    <color name="primary_60">#FF3D3D99</color>
+    <color name="primary_50">#FF333380</color>
+    <color name="primary_40">#FF292966</color>
+    <color name="primary_30">#FF1F1F4D</color>
+    <color name="primary_20">#FF141433</color>
+    <color name="primary_10">#FF0A0A1A</color>
+    <color name="secondary_99">#FFFFFBFF</color>
+    <color name="secondary_95">#FFF2F2F2</color>
+    <color name="secondary_90">#FFD9D9D9</color>
+    <color name="secondary_80">#FFB3B3B3</color>
+    <color name="secondary_70">#FF999999</color>
+    <color name="secondary_60">#FF808080</color>
+    <color name="secondary_50">#FF666666</color>
+    <color name="secondary_40">#FF4D4D4D</color>
+    <color name="secondary_30">#FF333333</color>
+    <color name="secondary_20">#FF1A1A1A</color>
+    <color name="secondary_10">#FF0D0D0D</color>
+    <color name="check_30">#FF00CC66</color>
+    <color name="error_90">#FFCC0000</color>
+    <color name="error">#FFB3261E</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

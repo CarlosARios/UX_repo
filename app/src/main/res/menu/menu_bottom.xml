@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/menu_inicio"
+    android:icon="@drawable/ic_wht_home_24"
+    android:title="Alarmas" />
+
+    <item
+        android:id="@+id/menu_alarmaVoz"
+        android:icon="@drawable/ic_wht_mic_24"
+        android:title="Alarma Voz"
+        />
+
+    <item
+        android:id="@+id/menu_estadisticas"
+        android:icon="@drawable/ic_wht_bar_chart_24"
+        android:title="Estadísticas" />
+</menu>
