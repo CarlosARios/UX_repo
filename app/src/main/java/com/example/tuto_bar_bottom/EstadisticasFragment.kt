@@ -30,12 +30,8 @@ class EstadisticasFragment : Fragment(R.layout.fragment_estadisticas) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        
-        binding.buttonConfig.setOnClickListener {
-            findNavController().navigate(R.id.page_alarmaManual)
 
 
-        }
 
 
     }
