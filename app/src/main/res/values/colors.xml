@@ -28,4 +28,9 @@
     <color name="error">#FFB3261E</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verde_est">#FF096436</color>
+    <color name="rojo_est">#FF940404</color>
+    <color name="amarillo_est">#FF9B5300</color>
+
+
 </resources>

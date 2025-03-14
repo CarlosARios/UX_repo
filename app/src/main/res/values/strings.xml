@@ -32,6 +32,9 @@
     <string name="Alarmas_Cumplidas">Alarmas Cumplidas</string>
     <string name="Alarmas_pospuestas">Alarmas pospuestas</string>
     <string name="Alarmas_canceladas">Alarmas canceladas</string>
+    <string name="Alarmas_cumplidas_Num.">60 Alarmas</string>
+    <string name="Alarmas_pospuestas_Num.">5 Alarmas</string>
+    <string name="Alarmas_canceladas_Num.">8 Alarmas</string>
     <string name="Diciembre">Diciembre</string>
     <string name="Enero">Enero</string>
     <string name="Febrero">Febrero</string>

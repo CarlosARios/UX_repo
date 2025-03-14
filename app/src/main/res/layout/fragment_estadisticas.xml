@@ -10,112 +10,235 @@
 
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:text="@string/Estadísticas"
         android:textAlignment="center"
         android:textColor="@color/primary_40"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/near_it"
         android:textAlignment="center"
         android:textColor="@color/primary_40"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_config"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:gravity="center"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ic_pausadas"
+        android:layout_width="55dp"
+        android:layout_height="79dp"
+        android:background="@color/primary_70"
+        android:src="@drawable/ic_alarm_pause_24"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout_pospuestas"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout_pospuestas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_pospuestas" />
+
+    <ImageView
+        android:id="@+id/ic_noCumplidas"
+        android:layout_width="55dp"
+        android:layout_height="79dp"
+        android:background="@color/primary_70"
+        android:src="@drawable/ic_alarm_cancelada_24"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout_Nocumplidas"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout_Nocumplidas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_Nocumplidas" />
+
+
+    <ImageView
+        android:id="@+id/image_chart_estd"
         android:layout_width="276dp"
         android:layout_height="163dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/line_chart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="336dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
+    <ImageView
+        android:id="@+id/ic_cumplias"
+        android:layout_width="55dp"
+        android:layout_height="79dp"
+        android:background="@color/primary_70"
+        android:src="@drawable/ic_alarm_cumplido_24"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout_cumplidas"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout_cumplidas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_cumplidas" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_pospuestas"
+        android:layout_width="322dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/primary_70"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager2">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_pausadas"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_cumplidas">
 
-    </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="336dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/Alarmas_pospuestas"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="@string/Alarmas_pospuestas_Num."
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/secondary_90"
+            android:gravity="center_vertical"
+            android:text="7%"
+            android:textColor="@color/amarillo_est"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_cumplidas"
+        android:layout_width="322dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/primary_70"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_cumplias"
+        app:layout_constraintTop_toBottomOf="@+id/image_chart_estd">
 
-    </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="336dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/Alarmas_Cumplidas"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="10dp"
+                android:text="@string/Alarmas_cumplidas_Num."
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/secondary_90"
+            android:gravity="center_vertical"
+            android:text="85%"
+            android:textColor="@color/verde_est"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_Nocumplidas"
+        android:layout_width="322dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/primary_70"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_noCumplidas"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_pospuestas">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2"
-        android:layout_width="353dp"
-        android:layout_height="42dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/Alarmas_canceladas"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:text="@string/Alarmas_canceladas_Num."
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@color/secondary_90"
+            android:gravity="center_vertical"
+            android:text="8%"
+            android:textColor="@color/rojo_est"
+            android:textSize="35dp" />
+    </LinearLayout>
 
     <View
-        android:id="@+id/divider"
+        android:id="@+id/divider3"
         android:layout_width="409dp"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/viewPager2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteY="145dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
