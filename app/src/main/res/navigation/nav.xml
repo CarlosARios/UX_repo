@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/menu_inicio"
+    app:startDestination="@id/menu_alarmas"
     android:id="@+id/nav">
 
     <fragment
@@ -32,7 +32,7 @@
 
     <action
         android:id="@+id/action_alarmaManualFragment_to_fragment_inicio"
-        app:destination="@id/menu_inicio" />
+        app:startDestination="@id/menu_alarmas" />
     </fragment>
 
     <activity
@@ -52,5 +52,12 @@
         android:name="com.example.tuto_bar_bottom.AlarmaEditarFragment"
         android:label="fragment_alarma_editar"
         tools:layout="@layout/fragment_alarma_editar" />
+
+    <fragment
+        android:id="@+id/menu_alarmas"
+        android:name="com.example.tuto_bar_bottom.AlarmasFragment"
+        android:label="Alarmas"
+        tools:layout="@layout/fragment_alarmas" />
+
 
 </navigation>

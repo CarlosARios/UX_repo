@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item
-    android:id="@+id/menu_inicio"
+
+
+    <item
+    android:id="@+id/menu_alarmas"
     android:icon="@drawable/ic_wht_home_24"
-    android:title="Alarmas" />
+    android:title="Home"
+        />
 
     <item
         android:id="@+id/menu_alarmaVoz"

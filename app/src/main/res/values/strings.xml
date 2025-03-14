@@ -44,5 +44,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="near_it">Near-it</string>
     <string name="tipo">Tipo de Alarma</string>
+    <string name="person_icon_desc">Descripcion</string>
+    <string name="check_alarm">Check</string>
+    <string name="delete_alarm">Delete</string>
+
     <string name="texto_alarma_voz">Recuerda mencionar lo siguiente: Descripción --> Fecha --> Ubicación</string>
+
 </resources>
