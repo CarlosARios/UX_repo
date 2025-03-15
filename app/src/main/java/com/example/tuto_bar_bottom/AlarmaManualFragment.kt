@@ -70,7 +70,7 @@ class AlarmaManualFragment : Fragment() {
 
         buttonCrearAlarma.setOnClickListener {
             Toast.makeText(requireContext(), "Alarma creada", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_alarmaManualFragment_to_fragment_inicio)
+            findNavController().navigate(R.id.action_alarmaManualFragment_to_menu_alarmas)
         }
 
         return view

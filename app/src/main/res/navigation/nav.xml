@@ -18,7 +18,12 @@
     <fragment
         android:id="@+id/menu_alarmaVoz"
         android:name="com.example.tuto_bar_bottom.AlarmaVozFragment"
-        android:layout="@layout/fragment_alarma_voz" />
+        android:layout="@layout/fragment_alarma_voz" >
+        <action
+            android:id="@+id/action_alarmaVozFragment_to_menu_alarmas"
+            app:destination="@id/menu_alarmas" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/menu_estadisticas"
@@ -28,12 +33,14 @@
     <fragment
         android:id="@+id/page_alarmaManual"
         android:name="com.example.tuto_bar_bottom.AlarmaManualFragment"
-        android:layout="@layout/fragment_alarma_manual">
-
-    <action
-        android:id="@+id/action_alarmaManualFragment_to_fragment_inicio"
-        app:startDestination="@id/menu_alarmas" />
+        android:label="Alarma Manual"
+        tools:layout="@layout/fragment_alarma_manual">
+        <!-- Acción para volver a la pantalla de Alarmas (Home) -->
+        <action
+            android:id="@+id/action_alarmaManualFragment_to_menu_alarmas"
+            app:destination="@id/menu_alarmas" />
     </fragment>
+
 
     <activity
         android:id="@+id/loginActivity"
