@@ -4,7 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoal">
+
+    <!-- Título "Near-it" -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Near-it"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
     <!-- Toggle group para elegir alarmas individuales o grupales -->
     <com.google.android.material.button.MaterialButtonToggleGroup
@@ -18,24 +33,27 @@
         app:singleSelection="true"
         app:selectionRequired="true"
         android:checkedButton="@+id/btnAlarmaIndividual">
-        <Button
+
+        <!-- Botón para alarmas individuales -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAlarmaIndividual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primary_60"
+            android:backgroundTint="@color/btn_individual_selector"
             android:textAllCaps="false"
-            app:icon="@drawable/person_24px" />
+            app:icon="@drawable/person_24px"
+            app:iconGravity="textStart"
+            app:iconTint="#FBFBFB" />
 
-        <Button
-            android:id="@+id/btnAlarmaIndividual2"
+        <!-- Botón para alarmas grupales -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAlarmaGrupal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primary_90"
-
-            android:layout_weight="1"
-            android:textAlignment="viewStart"
+            android:backgroundTint="@color/btn_grupal_selector"
             android:textAllCaps="false"
-            app:icon="@drawable/groups_2_24px" />
+            app:icon="@drawable/groups_2_24px"
+            app:iconTint="#FBFBFB" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -44,12 +62,79 @@
         android:id="@+id/rvAlarmas"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="16dp"
         android:layout_marginTop="16dp"
-        tools:listitem="@layout/item_alarma"
+        android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@id/toggleGroupAlarma"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_alarma" />
 
+
+    <FrameLayout
+        android:id="@+id/flFabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Vista overlay semitransparente -->
+        <View
+            android:id="@+id/overlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:visibility="gone" />
+
+        <!-- Floating Action Button principal, en la esquina inferior derecha -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/add_alert_24px"
+            android:contentDescription="Añade alarma"
+            android:backgroundTint="@color/primary_30"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Botón "Voz": aparecerá justo encima del FAB -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoz"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voz"
+            android:visibility="gone"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="96dp"
+        android:layout_marginEnd="16dp"
+        android:drawableStart="@drawable/person_24px"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary"
+        app:cornerRadius="16dp" />
+
+        <!-- Botón "Manual": aparecerá a la izquierda del FAB -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnManual"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual"
+            android:visibility="gone"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="96dp"
+        android:layout_marginBottom="16dp"
+        android:drawableStart="@drawable/person_24px"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary"
+        app:cornerRadius="16dp" />
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

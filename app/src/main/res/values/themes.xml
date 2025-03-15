@@ -1,9 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Tuto_bar_bottom" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Personaliza tu tema claro aquí -->
+        <item name="colorPrimary">@color/primary</item>
+        <!-- Puedes agregar más items según lo que necesites personalizar -->
     </style>
 
-    <style name="Theme.Tuto_bar_bottom" parent="Base.Theme.Tuto_bar_bottom" />
+    <!-- Tema de la aplicación que hereda del tema base -->
+    <style name="Theme.Tuto_bar_bottom" parent="Base.Theme.Tuto_bar_bottom">
+        <!-- Aquí puedes realizar personalizaciones adicionales si lo deseas -->
+    </style>
 </resources>
