@@ -88,16 +88,31 @@ class AlarmasFragment : Fragment() {
         alarmaAdapter = AlarmaAdapter(
             listaAlarmas,
             onCheckClick = { alarma ->
-                Toast.makeText(requireContext(), "${alarma.getNombre()} cumplida", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "${alarma.getNombre()} cumplida",
+                    Toast.LENGTH_SHORT
+                ).show()
                 listaAlarmas.remove(alarma)
                 alarmaAdapter.notifyDataSetChanged()
             },
             onDeleteClick = { alarma ->
-                Toast.makeText(requireContext(), "${alarma.getNombre()} eliminada", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "${alarma.getNombre()} eliminada",
+                    Toast.LENGTH_SHORT
+                ).show()
                 listaAlarmas.remove(alarma)
                 alarmaAdapter.notifyDataSetChanged()
-            }
-        )
+            },
+            onItemClick = { alarma ->
+                val bundle = Bundle().apply {
+                    putString("alarmaNombre", alarma.getNombre())
+                    // Agrega otros datos si es necesario
+                }
+                // Navegar a la pantalla de editar alarma.
+                findNavController().navigate(R.id.action_menu_alarmas_to_alarmaEditarFragment, bundle)
+            },        )
 
         binding.rvAlarmas.layoutManager = LinearLayoutManager(requireContext())
         binding.rvAlarmas.adapter = alarmaAdapter

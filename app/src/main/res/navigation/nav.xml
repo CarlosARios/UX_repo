@@ -64,7 +64,12 @@
         android:id="@+id/menu_alarmas"
         android:name="com.example.tuto_bar_bottom.AlarmasFragment"
         android:label="Alarmas"
-        tools:layout="@layout/fragment_alarmas" />
+        tools:layout="@layout/fragment_alarmas">
+
+        <action
+            android:id="@+id/action_menu_alarmas_to_alarmaEditarFragment"
+            app:destination="@id/alarmaEditarFragment" />
+    </fragment>
 
 
 </navigation>

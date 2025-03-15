@@ -1,49 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clEditarAlarma"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoal"
     tools:context=".AlarmaEditarFragment">
 
+    <!-- Título "Editar Alarma" -->
+    <TextView
+        android:id="@+id/tvEditarAlarmaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Alarma"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/cabin_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fondoal">
+    <!-- Campo de Nombre -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Nombre"
+        android:layout_marginHorizontal="32dp"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@id/tvEditarAlarmaTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cabin_medium"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="#090909"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Fecha Límite -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFechaLimite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Fecha límite de la alarma"
+        android:layout_marginHorizontal="32dp"
+        app:hintTextColor="@color/primary"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/event_24px"
+        app:layout_constraintTop_toBottomOf="@id/tilNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFechaLimite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cabin_medium"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="#070707"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Categoría (Spinner) con fondo personalizado -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Categoría"
+        android:layout_marginHorizontal="32dp"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintTop_toBottomOf="@id/tilFechaLimite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Spinner
+            android:id="@+id/spCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/spinner_background"
+            android:popupTheme="@style/ThemeOverlay.MaterialComponents" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Sección de Vibración -->
+    <LinearLayout
+        android:id="@+id/llVibrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tilCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tvVibrarLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/near_it"
-            android:textAlignment="center"
-            android:textColor="@color/primary_40"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Vibrar"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/cabin_medium" />
 
-        <Switch
-            android:id="@+id/switch1"
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swVibrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Switch"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="131dp" />
+            android:layout_marginStart="16dp"
+            android:checked="true" />
+    </LinearLayout>
 
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
+    <!-- Botones Cancelar / Guardar -->
+    <LinearLayout
+        android:id="@+id/llBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llVibrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Soy Alarma Editar"
-            tools:layout_editor_absoluteX="101dp"
-            tools:layout_editor_absoluteY="173dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/secondary_40"
+            android:fontFamily="@font/cabin_medium"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_99" />
 
-</FrameLayout>
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/primary_40"
+            android:fontFamily="@font/cabin_medium"
+            android:text="Guardar"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_99" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
