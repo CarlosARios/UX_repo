@@ -18,7 +18,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardAlarma"
             android:layout_width="155dp"
-            android:layout_height="wrap_content"
+            android:layout_height="87dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="4dp"
@@ -32,7 +32,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="72dp"
                 android:gravity="center_vertical"
                 android:minHeight="48dp"
                 android:orientation="horizontal"
@@ -51,6 +51,7 @@
                     android:id="@+id/tvNombreAlarma"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/cabin_medium"
                     android:text="Alarma1"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -63,13 +64,14 @@
         <Button
             android:id="@+id/btnCheck"
             android:layout_width="62dp"
-            android:layout_height="59dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/primary_40"
+            android:background="@drawable/rounded_button"
             android:contentDescription="@string/check_alarm"
             android:textAlignment="viewStart"
             app:cornerRadius="16dp"
+
             app:icon="@drawable/check_24px"
             app:iconTint="#FFFFFF" />
 
@@ -77,9 +79,9 @@
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="64dp"
-            android:layout_height="59dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/secondary_40"
+            android:background="@drawable/rounded_button_delete"
             android:contentDescription="@string/delete_alarm"
             android:textAlignment="center"
             android:textAllCaps="false"
